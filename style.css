@@ -31,6 +31,11 @@ input:focus, textarea:focus {
     border-color: #4a90e2;
     box-shadow: 0 0 10px rgba(74, 144, 226, 0.3);
 }
+.dark-mode {
+    background: #222;
+    color: white;
+}
+
 /* Dropdown styles */
 #suggestions {
     position: absolute;

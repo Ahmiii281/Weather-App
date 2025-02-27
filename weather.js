@@ -66,3 +66,23 @@ function fetchCitySuggestions() {
 
 // Attach event listener for live city suggestions
 document.getElementById("locationInput").addEventListener("input", fetchCitySuggestions);
+
+// Toggle Theme Function
+function toggleTheme() {
+    let body = document.body;
+    body.classList.toggle("dark-mode");
+
+    let theme = body.classList.contains("dark-mode") ? "dark" : "light";
+    localStorage.setItem("theme", theme);
+}
+
+// Attach event listener to the correct button
+document.getElementById("theme-toggle").addEventListener("click", toggleTheme);
+
+// Set theme on page load
+document.addEventListener("DOMContentLoaded", () => {
+    let savedTheme = localStorage.getItem("theme");
+    if (savedTheme === "dark") {
+        document.body.classList.add("dark-mode");
+    }
+});
