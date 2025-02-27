@@ -125,6 +125,20 @@ button:hover {
     color: white;
 }
 
+input#locationInput {
+    width: calc(100% - 24px); /* Adjust width to match button */
+    max-width: 360px; /* Same as button */
+    padding: 12px;
+    border: 2px solid #4a90e2;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    background: white;
+    color: #222;
+    transition: 0.3s;
+}
+
+
 /* Responsive */
 @media (max-width: 480px) {
     .container {
