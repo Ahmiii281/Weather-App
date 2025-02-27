@@ -1,60 +1,45 @@
+/* Light Mode Styles */
 body {
     font-family: 'Poppins', sans-serif;
     text-align: center;
     background: linear-gradient(135deg, #a8edea, #fed6e3);
-    color: #333;
+    color: #222;
     transition: background 0.3s ease, color 0.3s ease;
     margin: 0;
     padding: 0;
 }
+
 .container {
     margin: 20px auto;
     padding: 20px;
     width: 90%;
     max-width: 400px;
     border-radius: 15px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    background: rgba(255, 255, 255, 0.95);
     transition: background 0.3s ease;
 }
+
+/* Input & Textarea */
 input, textarea {
     width: 100%;
     padding: 12px;
     margin-top: 10px;
-    border: 2px solid #ccc;
+    border: 2px solid #4a90e2;
     border-radius: 8px;
     font-size: 16px;
     outline: none;
+    background: white;
+    color: #222;
     transition: 0.3s;
 }
+
 input:focus, textarea:focus {
-    border-color: #4a90e2;
-    box-shadow: 0 0 10px rgba(74, 144, 226, 0.3);
-}
-.dark-mode {
-    background: #222;
-    color: white;
+    border-color: #357ab7;
+    box-shadow: 0 0 12px rgba(74, 144, 226, 0.5);
 }
 
-/* Dropdown styles */
-#suggestions {
-    position: absolute;
-    width: 90%;
-    max-width: 400px;
-    background: white;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    display: none;
-    text-align: left;
-}
-#suggestions div {
-    padding: 10px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-}
-#suggestions div:hover {
-    background: #f1f1f1;
-}
+/* Button */
 button {
     width: 100%;
     padding: 12px;
@@ -65,22 +50,82 @@ button {
     background: #4a90e2;
     color: white;
     font-size: 16px;
+    font-weight: bold;
     transition: 0.3s;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
 }
+
 button:hover {
     background: #357ab7;
 }
-a {
-    display: block;
-    margin-top: 10px;
-    color: #4a90e2;
-    text-decoration: none;
-    font-weight: bold;
-    transition: 0.3s;
+
+/* Suggestions Dropdown */
+#suggestions {
+    position: absolute;
+    width: 90%;
+    max-width: 400px;
+    background: white;
+    border: 1px solid #4a90e2;
+    border-radius: 5px;
+    display: none;
+    text-align: left;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
-a:hover {
-    color: #357ab7;
+
+#suggestions div {
+    padding: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease;
 }
+
+#suggestions div:hover {
+    background: #4a90e2;
+    color: white;
+}
+
+/* Dark Mode Styles */
+.dark-mode {
+    background: #121212;
+    color: white;
+}
+
+.dark-mode .container {
+    background: #1e1e1e;
+    box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode input, .dark-mode textarea {
+    background: #2a2a2a;
+    color: white;
+    border: 2px solid #4a90e2;
+}
+
+.dark-mode input:focus, .dark-mode textarea:focus {
+    border-color: #4a90e2;
+    box-shadow: 0 0 12px rgba(74, 144, 226, 0.5);
+}
+
+.dark-mode button {
+    background: #4a90e2;
+    color: white;
+}
+
+.dark-mode button:hover {
+    background: #357ab7;
+}
+
+/* Dark Mode Suggestions */
+.dark-mode #suggestions {
+    background: #2a2a2a;
+    border-color: #4a90e2;
+}
+
+.dark-mode #suggestions div:hover {
+    background: #4a90e2;
+    color: white;
+}
+
+/* Responsive */
 @media (max-width: 480px) {
     .container {
         width: 95%;
