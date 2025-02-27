@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lovely Weather App</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="weather.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>🌤️ Cute Weather App</h1>
+        <button id="theme-toggle">🌙 Toggle Theme</button>
+        <input type="text" id="locationInput" placeholder="Enter your city..." oninput="showSuggestions()" />
+        <div id="suggestions"></div>
+        <button onclick="getWeather()">Get Weather</button>
+        <div id="weatherResult"></div>
+    </div>
+
+    <div class="feedback-container">
+        <h2>💌 Send Feedback</h2>
+        <textarea id="feedback" placeholder="Write your feedback..."></textarea>
+        <a id="whatsapp-link" href="#" target="_blank">Send via WhatsApp</a>
+        <a id="email-link" href="#" target="_blank">Send via Email</a>
+    </div>
+</body>
+</html>
